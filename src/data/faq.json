@@ -4,8 +4,12 @@
         "I was curious how the game worked internally. So I decided to make this app a by-product of that information."
     ],
     [
+        "Why do you require an in-game purchase to use this app?",
+        "Initially, I didn't have this in place. However, I realized that this app can give you the advantages of one of the in-game purchases (Permanent Ad Reward). This means the app could lessen the game creator's monetary support. So, I either had to kill this project or implement the purchase requirement."
+    ],
+    [
         "This app is open source, but why is part of it obfuscated? What are you hiding?",
-        "The obfuscated file is <kbd>crypto.js</kbd>. This is the file that handles the decryption and encryption of save games.<br /><br />Yes, JavaScript obfuscation is reversible. Still, I believe that anyone who is successful at deobfuscation could decrypt the save games themselves anyway.<br /><br />Anyone wishing to have a closer look at this file for security purposes can contact me."
+        "The obfuscated file is <kbd>crypto.js</kbd>. This is the file that handles the decryption, encryption, and in-game purchase verification.<br /><br />Yes, JavaScript obfuscation is reversible. Still, I believe that anyone who is successful at deobfuscation could decrypt the save games themselves anyway.<br /><br />Anyone wishing to have a closer look at this file for security purposes can contact me."
     ],
     [
         "Why does this app potentially disallow me from participating in the leaderboard?",
