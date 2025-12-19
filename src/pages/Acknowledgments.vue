@@ -83,6 +83,8 @@
                                 Favicon made by <a rel="noopener" href="https://www.freepik.com" title="Freepik">Freepik</a> from
                                 <a rel="noopener" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
                             </p>
+                            <hr />
+                            <h5>Use the donate features in-game to support the game developer!</h5>
                         </div>
                     </div>
                 </div>
