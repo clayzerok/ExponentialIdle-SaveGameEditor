@@ -138,6 +138,11 @@ function generateConfig(isProduction) {
             path: path.resolve(__dirname, isProduction ? 'docs': 'dist'),
             filename: isProduction ? 'js/[name]-[contenthash].js' : 'js/[name].js',
             publicPath: '',
+            hashFunction: 'sha256',
+        },
+        cache: {
+            type: 'filesystem',
+            hashAlgorithm: 'sha256',
         },
         module: {
             rules: [

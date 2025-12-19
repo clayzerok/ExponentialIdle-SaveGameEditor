@@ -6,7 +6,9 @@ import Decimal from 'decimal.js';
 // https://conicgames.github.io/exponentialidle/stars.html
 // Eaux Tacous#1021
 // https://github.com/1ekf/ExidleStars/blob/main/LICENSE
-import { default as CALCULATOR_CODE } from 'raw-loader!@/lib/third-party/1ekf/ExidleStars/Calculator.wls';
+import { default as CALCULATOR_CODE } from 'raw-loader!@/lib/third-party/exidlestars/Calculator.wls';
+
+const CALCULATOR_PLACEHOLDER_MARKER = 'EXIDLESTARS_CALCULATOR_PLACEHOLDER';
 
 const tio = new Tio('mathematica', 'https://tio.run/cgi-bin/static/fb67788fd3d1ebf92e66b295525335af-run/');
 
@@ -23,6 +25,9 @@ export function parseStarCalculation(data) {
 }
 
 export async function calculateStars(ft, stars, finalUpgradeLevel) {
+    if (CALCULATOR_CODE.includes(CALCULATOR_PLACEHOLDER_MARKER)) {
+        throw new Error('ExidleStars Calculator.wls is missing. Add the original file from the ExidleStars repository to enable star calculations.');
+    }
     tio.reset();
     tio.addCode(CALCULATOR_CODE);
     if (finalUpgradeLevel) {
